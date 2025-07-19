@@ -97,5 +97,3 @@ getfacl /raporty_marketingu/raport1.txt
 Jeśli wszystko działa poprawnie:
 - `ewa` i `arek` mają dostęp do katalogu i mogą tworzyć pliki
 - `janek` nie ma dostępu (chyba że użyjesz ACL)
-
-➡️ Gotów na **Etap 2 – Usługi systemowe, logi, `systemctl`, `journalctl`, `cron`**?

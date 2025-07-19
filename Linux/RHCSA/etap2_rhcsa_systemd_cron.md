@@ -114,5 +114,3 @@ atq
 - Usługa `sshd` zarządzana?
 - Cron działa i tworzy log?
 - Jednorazowe zadanie `at` wykonane?
-
-➡️ Gotów na **Etap 3 – Zarządzanie plikami, wyszukiwanie i archiwizacja (`find`, `tar`, `gzip`)**?
