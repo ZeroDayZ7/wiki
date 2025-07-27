@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    restart: always
+    hostname: gitlab.local
+    ports:
+      - "8080:80"       # UI GitLaba na http://localhost:8080
+      - "8443:443"      # HTTPS (self-signed cert w dev)
+      - "2222:22"       # SSH dostęp do GitLaba
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local:8080'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2222
+        # Możesz dodać konfigurację SMTP, HTTPS, registry itp.
+    volumes:
+      # 🔹 WERSJA DEWELOPERSKA → łatwy dostęp do plików
+      # - ./gitlab/config:/etc/gitlab
+      # - ./gitlab/logs:/var/log/gitlab
+      # - ./gitlab/data:/var/opt/gitlab
+      # 🔹 Aby użyć WOLUMENÓW Dockera zamiast lokalnych katalogów, zamień powyższe na:
+      - gitlab-config:/etc/gitlab
+      - gitlab-logs:/var/log/gitlab
+      - gitlab-data:/var/opt/gitlab
+    shm_size: '256m'  # Zwiększona pamięć współdzielona
+
+# 🔹 Definicje wolumenów (jeśli zdecydujesz się użyć Docker volumes)
+volumes:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:
