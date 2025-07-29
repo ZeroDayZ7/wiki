@@ -17,6 +17,7 @@ GitLab CI/CD (Continuous Integration / Continuous Deployment) to **wbudowany w G
   * sprawdzane są błędy,
   * kod jest budowany.
     Dzięki temu błędy są wychwytywane **wcześnie**, a nie dopiero w produkcji.
+@builtin markdown  
 
 * **CD (Continuous Delivery/Deployment)** – ciągłe dostarczanie lub wdrażanie – oznacza, że po pomyślnym zbudowaniu aplikacji można:
 
