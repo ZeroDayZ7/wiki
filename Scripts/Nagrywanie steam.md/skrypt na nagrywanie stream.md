@@ -1,3 +1,5 @@
+1. Nagrywanie filmów web gdy są streamowane z serwera. 
+
 ```script
 const video = document.querySelector('video');
 const stream = video.captureStream();
